@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CardGameViewController.h
 //  Matchismo
 //
 //  Created by Winlentia on 24.07.2018.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CardGameViewController : UIViewController
+
+
 
 
 @end
