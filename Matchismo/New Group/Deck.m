@@ -7,9 +7,14 @@
 //
 
 #import "Deck.h"
-@property (strong,nonatomic) NSMutableArray *cards;
+
+@interface Deck()
+@property (strong , nonatomic ) NSMutableArray *cards;
+@end
 
 @implementation Deck
+
+
 
 -(NSMutableArray *)cards{
     if(!_cards) _cards = [[NSMutableArray alloc] init];
@@ -23,6 +28,10 @@
         [self.cards addObject:card];
     }
     
+}
+
+-(void)addCard:(Card *)card{
+    [self.cards addObject:card];
 }
 
 -(Card *)drawRandomCard{
