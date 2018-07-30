@@ -10,22 +10,23 @@
 #import "PlayingCardDeck.h"
 
 
+
 @interface CardGameViewController ()
 
 
 @property (weak, nonatomic) IBOutlet UILabel *flipLabel;
 @property (nonatomic) int flipCount;
-@property (nonatomic , strong ) Deck *deck;
+@property (strong , nonatomic) Deck *deck;
 @end
 
 @implementation CardGameViewController
 
--(Deck *)deck{
-    if (!_deck) _deck = [self createDeck];
+- (Deck *) deck{
+    if(!_deck) _deck = [self createDeck];
     return _deck;
 }
 
--(Deck *)createDeck{
+-(Deck *) createDeck{
     return [[PlayingCardDeck alloc] init];
 }
 
@@ -43,7 +44,7 @@
         [sender setTitle:@"" forState:UIControlStateNormal];
     }
     else{
-        Card * card = [self.deck drawRandomCard];
+        Card *card = [self.deck drawRandomCard];
         
         UIImage *cardImage = [UIImage imageNamed:@"cardfront"];
         [sender setBackgroundImage:cardImage forState:UIControlStateNormal];

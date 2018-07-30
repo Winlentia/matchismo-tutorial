@@ -22,7 +22,7 @@
                                 <rect key="frame" x="155" y="286" width="64" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="A♣" backgroundImage="cardfront">
+                                <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -50,6 +50,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cardfront" width="32" height="48"/>
+        <image name="cardback" width="64" height="96"/>
     </resources>
 </document>

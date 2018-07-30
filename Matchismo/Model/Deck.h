@@ -2,7 +2,7 @@
 //  Deck.h
 //  Matchismo
 //
-//  Created by Winlentia on 26.07.2018.
+//  Created by Can on 30.07.2018.
 //  Copyright © 2018 Winlentia. All rights reserved.
 //
 
@@ -14,6 +14,5 @@
 -(void)addCard:(Card *)card atTop:(BOOL)atTop;
 -(void)addCard:(Card *)card;
 
--(Card *)drawRandomCard;
-
+- (Card *)drawRandomCard;
 @end

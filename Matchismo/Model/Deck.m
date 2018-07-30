@@ -2,7 +2,7 @@
 //  Deck.m
 //  Matchismo
 //
-//  Created by Winlentia on 26.07.2018.
+//  Created by Can on 30.07.2018.
 //  Copyright © 2018 Winlentia. All rights reserved.
 //
 
@@ -14,37 +14,38 @@
 
 @implementation Deck
 
-
-
--(NSMutableArray *)cards{
+- (NSMutableArray *)cards
+{
     if(!_cards) _cards = [[NSMutableArray alloc] init];
     return _cards;
 }
 
--(void)addCard:(Card *)card atTop:(BOOL)atTop{
-    if(atTop){
+-(void)addCard:(Card *)card atTop:(BOOL)atTop
+{
+    if (atTop) {
         [self.cards insertObject:card atIndex:0];
-    }else {
+    }else{
         [self.cards addObject:card];
     }
-    
 }
 
--(void)addCard:(Card *)card{
+-(void)addCard:(Card *)card
+{
     [self.cards addObject:card];
 }
 
--(Card *)drawRandomCard{
+-(Card *)drawRandomCard
+{
     Card *randomCard = nil;
     
-    if([self.cards count]){
+    if ([self.cards count]) {
         unsigned index = arc4random() % [self.cards count];
         randomCard = self.cards[index];
         [self.cards removeObjectAtIndex:index];
-        
     }
     
     return randomCard;
 }
+
 
 @end

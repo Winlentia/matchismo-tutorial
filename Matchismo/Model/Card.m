@@ -2,7 +2,7 @@
 //  Card.m
 //  Matchismo
 //
-//  Created by Winlentia on 26.07.2018.
+//  Created by Can on 30.07.2018.
 //  Copyright © 2018 Winlentia. All rights reserved.
 //
 
@@ -10,11 +10,13 @@
 
 @implementation Card
 
--(int)match:(NSArray *)otherCards{
+- (int)match:(NSArray *)otherCards
+{
     int score = 0;
-    
-    for (Card *card in otherCards) {
-        if([card.contents isEqualToString:self.contents]){
+    for ( Card *card in otherCards )
+    {
+        if ([card.contents isEqualToString:self.contents])
+        {
             score = 1 ;
         }
     }
